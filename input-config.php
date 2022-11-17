@@ -1,7 +1,16 @@
 <?php
-      $mysqli = new mysqli("localhost","root","","nama_mahasiswa");
-      if ($mysqli -> connect_errno) {
-            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-            exit();
-      }
+    date_default_timezone_set('Asia/Jakarta');
+
+    if(!isset($_SESSION))
+    {
+        include('./header.php');
+        session_start();
+    }
+    
+
+    $mysqli = new mysqli("localhost", "root", "", "kwu_rofiaf");
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();
+    }
 ?>
